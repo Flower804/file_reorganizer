@@ -22,7 +22,6 @@ void dir_reader::reorganizer(int mode, std::string volume) {
         position++;
         //std::cout << entry.path() << std::endl;
     }
-
 }
 
 void dir_reader::set_file_list(std::list<File> received_filelist) {

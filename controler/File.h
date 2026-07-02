@@ -4,11 +4,13 @@
 #include <string>
 
 class File {
-public:
-    std::string filename;
-    int position;
-
-    void Updater(std::string new_filename, int new_position);
+    public:
+        void Updater(std::string new_filename, int new_position);
+        std::string get_filename();
+    
+    private:
+        std::string filename;
+        int position;
 };
 
 #endif
