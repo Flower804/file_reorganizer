@@ -11,6 +11,8 @@ public class cpp_runner{
     switch(initializer){
       case(1):
         directory_checker();
+
+        break;
       case(2):
 
       default:
@@ -18,10 +20,10 @@ public class cpp_runner{
     }
   }
 
-  public static void directory_checker(){
+  private static void directory_checker(){
     String home_dir = System.getProperty("user.dir");
     String current_dir = home_dir.concat("/controler");
-    String scipt_to_run = "./reorganizer";
+    String scipt_to_run = "./organizer";
     
     //String command = current_dir.concat(scipt_to_run);
     String command = scipt_to_run;
