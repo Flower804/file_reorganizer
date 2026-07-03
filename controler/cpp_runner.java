@@ -10,7 +10,7 @@ public class cpp_runner{
   public cpp_runner(int initializer){
     switch(initializer){
       case(1):
-        directory_checker();
+        directory_checker(1, "/home/Gabriel_Moita/Documents/file_reorganizer/pasta");
 
         break;
       case(2):
@@ -20,16 +20,19 @@ public class cpp_runner{
     }
   }
 
-  private static void directory_checker(){
+  private static void directory_checker(int mode ,String directory){
     String home_dir = System.getProperty("user.dir");
     String current_dir = home_dir.concat("/controler");
     String scipt_to_run = "./organizer";
     
     //String command = current_dir.concat(scipt_to_run);
     String command = scipt_to_run;
+    String mode_in_string = String.valueOf(mode);
 
     ProcessBuilder pb = new ProcessBuilder(
-          command
+        command,
+        mode_in_string,
+        directory
         );
     pb.directory(new File(current_dir));
     pb.redirectErrorStream(true);

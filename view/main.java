@@ -6,11 +6,16 @@ import java.util.Scanner;
 
 public class main{
   static private Scanner input = new Scanner(System.in);
-
+  
   public static void main(String[] args){
     main_menu();
   }
-
+  
+  /**The main menu that is showen when the program is started
+   *
+   * 
+   *
+   */ 
   public static void main_menu(){
     while(true){
       System.out.println("Please select your option\n1-run directory checker");
@@ -27,4 +32,5 @@ public class main{
       }
     }
   }
+
 }
